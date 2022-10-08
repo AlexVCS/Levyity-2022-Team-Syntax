@@ -1,5 +1,6 @@
 import Card from "./Card";
 import { Grid } from "@mui/material";
+import { Weather } from "./Weather";
 
 const sections = [
   {
@@ -11,14 +12,18 @@ const sections = [
   { title: "h", description: "l", size: 12 },
 ];
 
-const cards = sections.map((section) => (
-  <Grid container item xs={6}>
-    <Card title={section.title} description={section.description} />
-  </Grid>
-));
+// const cards = sections.map((section) => (
+//   <Grid container item xs={4}>
+//     <Weather />
+//   </Grid>
+// ));
 
 function Live() {
-  return <div className="grid">{cards}</div>;
+  return (
+    <div className="grid">
+      <Weather />
+    </div>
+  );
 }
 
 export default Live;
